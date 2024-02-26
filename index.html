@@ -19,16 +19,17 @@
   <body>
     <header>
       <div id="header">
-        <h1>Explore</h1>
-        <h2>free games</h2>
+        <div class="header-title">
+          <h1>Explore</h1>
+          <h2>free games</h2>
+        </div>
         <p>
-          Check out collection of awesome free games.<br />
-          All free games are here.
+          Check out collection of awesome free games. All free games are here.
         </p>
         <a href="#selectPlatform">Find your game</a>
       </div>
     </header>
-    <div class="sticky flex">
+    <div class="sticky flex" id="mobileNav">
       <img
         src="./images/search.png"
         alt="search icon"
@@ -53,9 +54,15 @@
       <img src="images/info.png" alt="" class="choose" />
     </div>
     <div id="platform-buttons" class="hidden">
+      <div class="plathform-button-with-icon">
+        <img src="./images/windows.png" alt="" />
+        <button id="pc-games">PC (Windows)</button>
+      </div>
       <button id="all-games">All games</button>
-      <button id="web-games">Web Browser</button>
-      <button id="pc-games">PC (Windows)</button>
+      <div class="plathform-button-with-icon">
+        <img src="./images/web.png" alt="" />
+        <button id="web-games">Web Browser</button>
+      </div>
     </div>
     <div id="output" class="flex"></div>
   </body>
