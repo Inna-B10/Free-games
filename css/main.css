@@ -66,7 +66,7 @@ header h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 60%;
-    height: 50vh;
+    height: 55vh;
   }
 
   .header-title {
@@ -80,7 +80,7 @@ header h1 {
 
   #header p {
     width: 100%;
-    margin: 0.1em 0 1.1em 0;
+    margin: 0.1em 0 1em 0;
   }
 
   #header a {
@@ -160,9 +160,61 @@ header h1 {
     background-color: transparent;
     border: none;
   }
+
+  .plathform-button-with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .plathform-button-with-icon img {
+    height: 20px;
+  }
 }
 
 /* Main field */
+
+#navButtonsWeb {
+  display: none;
+}
+
+@media (min-width: 450px) {
+  #navButtonsWeb {
+    margin: 0 auto;
+    width: 97%;
+    padding: 1.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #search-field-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  #search-field-web input {
+    width: 27em;
+    padding: 0.4em 1em;
+    margin: 0 1em;
+    border-radius: 60px;
+    background-color: #0d0b31;
+    border: 1.5px solid #9e9dad;
+  }
+
+  #navButtonsWeb img {
+    height: 24px;
+  }
+
+  #filter-and-sorting-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
 
 #output {
   height: 1500px;
@@ -202,3 +254,22 @@ header h1 {
 }
 
 /* -------------------------------------------------------------------------- */
+
+/* Footer */
+
+footer p {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 80%;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 450px) {
+  footer p {
+    width: 20%;
+  }
+}
