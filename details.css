@@ -1,0 +1,97 @@
+/* 
+  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
+ */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+#gameInfoContainer {
+  max-width: 100%;
+  background-color: #0d0b31;
+  color: #fff;
+}
+
+#mainPicture {
+  margin: 0;
+  display: flex;
+}
+
+#mainPicture img {
+  margin: 0;
+  width: 100%;
+}
+
+#gameinfo,
+#additionalInfoContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  background-image: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.295),
+    rgba(255, 255, 255, 0)
+  );
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(0.25turn, #ff8690, #51a3df);
+  border-image-slice: 1;
+}
+
+#gameinfo h1 {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 0 0.3em 0;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #ff8690;
+}
+
+#gameinfo p {
+  font-family: "Nunito", sans-serif;
+}
+
+#screenshotContainer {
+  background-color: #0d0b31;
+  background-image: url(./images/2151149412.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#carouselScreens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: none;
+}
+
+#carouselScreens img {
+  width: 90%;
+  margin: 3em auto;
+}
+
+#additionalInfoContainer {
+  color: #fff;
+  background-color: #0d0b31;
+  font-family: "Inter", sans-serif;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+}
