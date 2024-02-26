@@ -3,11 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ---------------------------- Google Fonts ----------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ----------------------------------------------------------------------- -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="js/main.js"></script>
     <title>Free Games</title>
   </head>
   <body>
-    <div id="output"></div>
+    <header>
+      <div id="header">
+        <h1>Explore</h1>
+        <h2>free games</h2>
+        <p>
+          Check out collection of awesome free games.<br />
+          All free games are here.
+        </p>
+      </div>
+      <a href="#selectPlatform">Find your game</a>
+    </header>
+    <div class="sticky flex">
+      <img
+        src="./images/search.png"
+        alt="search icon"
+        title="Search game by name"
+      />
+      <img
+        src="./images/filter.png"
+        alt="filter icon"
+        title="Filter games by:"
+      />
+      <img src="./images/sort.png" alt="sort icon" title="Sort games by:" />
+    </div>
+    <div id="selectPlatform">
+      Select platform <img src="images/info.png" alt="" class="choose" />
+    </div>
+    <div id="platform-buttons" class="hidden">
+      <button id="all-games">All games</button>
+      <button id="web-games">Web Browser</button>
+      <button id="pc-games">PC (Windows)</button>
+    </div>
+    <div id="output" class="flex"></div>
   </body>
 </html>

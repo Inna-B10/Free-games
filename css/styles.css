@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16.72px;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 53.51px;
+}
+
+h2 {
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+a {
+  font-family: "Inter", sans-serif;
+  text-wrap: nowrap;
+}
