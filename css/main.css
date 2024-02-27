@@ -206,6 +206,10 @@ header h1 {
     border-radius: 60px;
     background-color: #0d0b31;
     border: 1.5px solid #9e9dad;
+    color: #ff8690;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
   }
 
   #navButtonsWeb img {
@@ -241,6 +245,10 @@ header h1 {
   border: 1.5px solid rgba(255, 255, 255, 0.087);
   border-radius: 12px;
   box-shadow: 1.11px 1.11px 4px rgba(13, 11, 49, 0.6);
+}
+
+.card .hide {
+  display: none;
 }
 
 .card-details {

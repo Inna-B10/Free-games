@@ -17,6 +17,7 @@
     <title>Free Games</title>
   </head>
   <body>
+    <!-- ------------- HEADER ------------------ -->
     <header>
       <div id="header">
         <div class="header-title">
@@ -29,6 +30,8 @@
         <a href="#selectPlatform">Find your game</a>
       </div>
     </header>
+    <!-- ------------- HEADER IS OVER ------------------ -->
+    <!-- ------------- FIXED NAV BAR FOR MOBILE VERSION ------------------ -->
     <div class="sticky flex" id="mobileNav">
       <img
         src="./images/search.png"
@@ -49,10 +52,14 @@
         class="stikyNavBtn"
       />
     </div>
+    <!-- ------------- FIXED NAV BAR FOR MOBILE VERSION IS OVER ------------------ -->
+    <!-- ------------- SELECT PLATHFORM FOR MOBILE VERSION ------------------ -->
     <div id="selectPlatform">
       <p>Select platform</p>
       <img src="images/info.png" alt="" class="choose" />
     </div>
+    <!-- ------------- SELECT PLATHFORM FOR MOBILE VERSION IS OVER ------------------ -->
+    <!-- ------------- SELECT PLATHFORM FOR WEB VERSION ------------------ -->
     <div id="platform-buttons" class="hidden">
       <div class="plathform-button-with-icon">
         <img src="./images/windows.png" alt="" />
@@ -64,17 +71,20 @@
         <button id="web-games">Web Browser</button>
       </div>
     </div>
+    <!-- ------------- SELECT PLATHFORM FOR WEB VERSION IS OVER ------------------ -->
+    <!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
     <div id="navButtonsWeb">
       <div class="empty-field"></div>
       <div id="search-field-web" class="navButtonsWebSide">
         <img src="./images/search-web.png" alt="" />
-        <input type="text" />
+        <input type="search" id="searchBTN" />
       </div>
       <div id="filter-and-sorting-field" class="navButtonsWebSide">
         <img src="./images/filter-web.png" alt="" />
         <img src="./images/sort-web.png" alt="" />
       </div>
     </div>
+    <!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
     <!-- Added with JS -->
     <div id="output" class="flex"></div>
     <!-- Added with JS -->

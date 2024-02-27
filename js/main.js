@@ -8,7 +8,9 @@ const urlWebGames = urlApi.concat("/games?platform=browser");
 const urlPcGames = urlApi.concat("/games?platform=pc");
 export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
-console.log(currentLocation);
+// console.log(currentLocation);
+
+// const searchInput = document.getElementById("searchBTN");
 
 if (currentLocation === "/" || currentLocation === "/JS-API/") {
   const allGames = document.getElementById("all-games");
@@ -145,3 +147,26 @@ function showGames(array) {
     output.appendChild(card);
   });
 }
+
+/* ------------------- Searching Data From API ------------------- */
+
+document.getElementById("searchBTN").oninput = function () {
+  const value = this.value.toLowerCase().trim();
+  console.log(value);
+  const searchedCards = document.querySelectorAll(".card");
+
+  searchedCards.forEach(function (elem) {
+    const title = elem.querySelector("h2").innerText.toLowerCase();
+    if (value !== "") {
+      if (title.search(value) === -1) {
+        elem.classList.add("hide");
+      } else {
+        elem.classList.remove("hide");
+      }
+    } else {
+      searchedCards.forEach(function (elem) {
+        elem.classList.remove("hide");
+      });
+    }
+  });
+};
