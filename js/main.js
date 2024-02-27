@@ -79,7 +79,8 @@ export async function getGamesData(url) {
 
 function updateDisplay(array) {
   switch (currentLocation) {
-    case "/" || "/JS-API/":
+    case "/":
+    case "/JS-API/":
       showGames(array);
       break;
     case "/JS-API/details.html":
