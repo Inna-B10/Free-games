@@ -10,7 +10,7 @@ export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
 console.log(currentLocation);
 
-if (currentLocation === "/" || "/JS-API/") {
+if (currentLocation === "/" || currentLocation === "/JS-API/") {
   const allGames = document.getElementById("all-games");
   const webGames = document.getElementById("web-games");
   const pcGames = document.getElementById("pc-games");
