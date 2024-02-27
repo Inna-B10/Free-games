@@ -78,6 +78,7 @@ export async function getGamesData(url) {
 /* ----------------------- Display Data On The Screen ----------------------- */
 
 function updateDisplay(array) {
+  /* Updated switchcase */
   switch (currentLocation) {
     case "/":
     case "/JS-API/":
