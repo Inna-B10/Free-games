@@ -17,15 +17,26 @@ if (currentLocation === "/") {
 
   //display All games by default
   getGamesData(urlAllGames);
+  allGames.classList.add("specialColor");
 
   //choose platform
+
   allGames.addEventListener("click", () => {
+    webGames.classList.remove("specialColor");
+    pcGames.classList.remove("specialColor");
+    allGames.classList.add("specialColor");
     getGamesData(urlAllGames);
   });
   webGames.addEventListener("click", () => {
+    allGames.classList.remove("specialColor");
+    pcGames.classList.remove("specialColor");
+    webGames.classList.add("specialColor");
     getGamesData(urlWebGames);
   });
   pcGames.addEventListener("click", () => {
+    webGames.classList.remove("specialColor");
+    allGames.classList.remove("specialColor");
+    pcGames.classList.add("specialColor");
     getGamesData(urlPcGames);
   });
 
@@ -101,6 +112,13 @@ function showGames(array) {
       class: "flex card-details",
     });
 
+    const readMore = createNode("a", {
+      href: `details.html?id=${element.id}`,
+      target: "_blank",
+      role: "button",
+    });
+    readMore.innerText = "Read more";
+
     const platformArray = element.platform.split(", ");
     platformArray.map((item) => {
       if (item === "Web Browser") {
@@ -120,15 +138,8 @@ function showGames(array) {
     const genre = createNode("p", {});
     genre.innerText = element.genre;
 
-    const readMore = createNode("a", {
-      href: `details.html?id=${element.id}`,
-      target: "_blank",
-      role: "button",
-    });
-    readMore.innerText = "Read more";
-
     details.appendChild(genre);
-    card.append(thumb, title, shortDesc, details, readMore);
+    card.append(thumb, title, shortDesc, readMore, details);
     output.appendChild(card);
   });
 }
