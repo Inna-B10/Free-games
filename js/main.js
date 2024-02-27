@@ -1,8 +1,7 @@
 import { createNode } from "./utilities.js";
 import { showGameDetails } from "./details.js";
 
-export const urlApi =
-  "https://free-to-play-games-database.p.rapidapi.com/api/games";
+export const urlApi = "https://free-to-play-games-database.p.rapidapi.com/api";
 
 const urlAllGames = urlApi.concat("/games");
 const urlWebGames = urlApi.concat("/games?platform=browser");
