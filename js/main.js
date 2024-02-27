@@ -10,7 +10,7 @@ export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
 console.log(currentLocation);
 
-if (currentLocation === "/") {
+if (currentLocation === "/" || "/JS-API/") {
   const allGames = document.getElementById("all-games");
   const webGames = document.getElementById("web-games");
   const pcGames = document.getElementById("pc-games");
@@ -79,7 +79,7 @@ export async function getGamesData(url) {
 
 function updateDisplay(array) {
   switch (currentLocation) {
-    case "/":
+    case "/" || "/JS-API/":
       showGames(array);
       break;
     case "/JS-API/details.html":
