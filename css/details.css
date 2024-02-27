@@ -37,7 +37,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 1em;
-  text-align: center;
+  text-align: justify;
   background-image: linear-gradient(
     125deg,
     rgba(255, 255, 255, 0.295),
@@ -61,6 +61,7 @@ body {
 
 #gameinfo p {
   font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
 }
 
 #screenshotContainer {
