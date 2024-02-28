@@ -4,7 +4,10 @@ import { createNode } from "./utilities.js";
 const detailsOutput = document.getElementById("detailsOutput");
 
 /* ----------------------- Get Details Of Current Game ---------------------- */
-if (window.location.pathname === "/JS-API/details.html") {
+if (
+  window.location.pathname === "/JS-API/details.html" ||
+  window.location.pathname === "/details.html"
+) {
   const gameId = window.location.href.split("=")[1];
 
   const gameDetailsUrl =
