@@ -58,12 +58,15 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
 
   allGamesMobile.addEventListener("click", () => {
     getGamesData(urlAllGames);
+    dropdownMenuMobile.classList.toggle("dropdownMenu");
   });
   webGamesMobile.addEventListener("click", () => {
     getGamesData(urlWebGames);
+    dropdownMenuMobile.classList.toggle("dropdownMenu");
   });
   browserGamesMobile.addEventListener("click", () => {
     getGamesData(urlPcGames);
+    dropdownMenuMobile.classList.toggle("dropdownMenu");
   });
 
   /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
