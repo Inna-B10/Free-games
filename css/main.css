@@ -327,7 +327,8 @@ header h1 {
   }
 
   .card-details p {
-  font-size: 1rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 450px) {
