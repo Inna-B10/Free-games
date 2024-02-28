@@ -232,7 +232,7 @@ header h1 {
 }
 
 .card {
-  width: 22%;
+  width: 70%;
   min-width: 200px;
   justify-content: space-between;
   gap: 0.3em;
@@ -299,6 +299,16 @@ header h1 {
   text-transform: lowercase;
   font-weight: 700;
   font-size: 1rem;
+}
+
+@media (min-width: 450px) {
+  .card {
+    width: 22%;
+    min-width: 200px;
+    justify-content: space-between;
+    gap: 0.3em;
+    padding: 0.5em;
+  }
 }
 
 /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */

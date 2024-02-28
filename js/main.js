@@ -2,6 +2,7 @@ import { createNode } from "./utilities.js";
 import { showGameDetails } from "./details.js";
 
 export const urlApi = "https://free-to-play-games-database.p.rapidapi.com/api";
+console.log(urlApi);
 
 const urlAllGames = urlApi.concat("/games");
 const urlWebGames = urlApi.concat("/games?platform=browser");
@@ -175,9 +176,9 @@ document.getElementById("searchBTN").oninput = function () {
 
 /* ------------------- Filtering Data From API ------------------- */
 
-const filter = document.getElementById("filter-icon");
+// const filter = document.getElementById("filter-icon");
 
-filter.addEventListener("click", () => {
-  const filterItem = createNode("p", {});
-  filterItem.innerText = element.genre;
-});
+// filter.addEventListener("click", () => {
+//   const filterItem = createNode("p", {});
+//   filterItem.innerText = element.genre;
+// });
