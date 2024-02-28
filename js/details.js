@@ -63,14 +63,14 @@ export function showGameDetails(array) {
   }
   /* ------------------------- Additional Information ------------------------- */
   const addInfoWrapper = createNode("div", {
-    class: "flex, column",
+    class: "flex, column additionalInfoContainer",
   });
   const addInfoTitle = createNode("h2", {
     class: "text-center",
   });
   addInfoTitle.innerText = "Additional Information";
   const addInfoDiv = createNode("div", {
-    class: "flex",
+    class: "flex addInfoDiv",
   });
   const divLeft = createNode("div", {
     class: "flex column",
@@ -112,14 +112,29 @@ export function showGameDetails(array) {
 
   addInfoWrapper.append(addInfoTitle, addInfoDiv);
 
+  const warningFirst = createNode("p", {});
+  warningFirst.innerText =
+    "Please note this free-to-play game may or may not offer optional in-game purchases.";
+
+  const warningSecond = createNode("p", {});
+  warningSecond.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`;
+
+  const warningThird = createNode("p", {});
+  warningThird.innerText = "Requires 3rd-Party Account";
+
   /* ---------------------------- Link To The Game ---------------------------- */
+  const linkContainer = createNode("div", {
+    class: "linkContainer",
+  });
   const link = createNode("a", {
     href: array.game_url,
     target: "_blank",
     role: "button",
+    class: "pushToGameBtn",
     title: `Let\'s play ${array.title}`,
   });
   link.innerText = `Play ${array.title}`;
+  linkContainer.appendChild(link);
 
-  detailsOutput.append(descWrapper, screenshots, addInfoWrapper, link);
+  detailsOutput.append(descWrapper, screenshots, addInfoWrapper, linkContainer);
 }

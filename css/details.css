@@ -27,7 +27,7 @@ body {
 }
 
 .gameinfo,
-#additionalInfoContainer {
+.additionalInfoContainer {
   width: 100%;
   margin: 0 auto;
   padding: 1em;
@@ -81,13 +81,59 @@ body {
   margin: 3em auto;
 }
 
-#additionalInfoContainer {
+.additionalInfoContainer {
   color: #fff;
   background-color: #0d0b31;
   font-family: "Inter", sans-serif;
 }
 
-.additionalInfo {
+.additionalInfoContainer h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.addInfoDiv {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.addInfoDiv h3 {
+  margin: 1em 0 0.3em 0;
+}
+
+.linkContainer {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pushToGameBtn {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 40px;
+  background-image: linear-gradient(to right, #51a3df, #ff8690);
+  border-radius: 66.89px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer p {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 80%;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 450px) {
+  footer p {
+    width: 20%;
+  }
 }
