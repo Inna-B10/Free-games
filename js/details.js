@@ -19,8 +19,8 @@ if (
 
 /* -------------------- Create HTML Elements (Details Page) ------------------- */
 export function showGameDetails(array) {
-  const titlePage = document.getElementById("title");
-  titlePage.innerText = array.title;
+  // const titlePage = document.getElementById("title");
+  // titlePage.innerText = array.title;
 
   /* ------------------------- Thumb+title+description ------------------------ */
   const descWrapper = createNode("div", {
@@ -110,17 +110,28 @@ export function showGameDetails(array) {
   divRight.append(publisherDiv, dateDiv);
   addInfoDiv.append(divLeft, divRight);
 
-  addInfoWrapper.append(addInfoTitle, addInfoDiv);
+  // -------------------------------- Warning info
 
-  const warningFirst = createNode("p", {});
+  const warningInfo = createNode("div", {});
+  const warningFirst = createNode("p", {
+    class: "warning",
+  });
   warningFirst.innerText =
     "Please note this free-to-play game may or may not offer optional in-game purchases.";
 
-  const warningSecond = createNode("p", {});
+  const warningSecond = createNode("p", {
+    class: "warning",
+  });
   warningSecond.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`;
 
-  const warningThird = createNode("p", {});
+  const warningThird = createNode("p", {
+    class: "warning",
+  });
   warningThird.innerText = "Requires 3rd-Party Account";
+
+  warningInfo.append(warningFirst, warningSecond, warningThird);
+
+  addInfoWrapper.append(addInfoTitle, addInfoDiv, warningInfo);
 
   /* ---------------------------- Link To The Game ---------------------------- */
   const linkContainer = createNode("div", {
@@ -136,5 +147,30 @@ export function showGameDetails(array) {
   link.innerText = `Play ${array.title}`;
   linkContainer.appendChild(link);
 
-  detailsOutput.append(descWrapper, screenshots, addInfoWrapper, linkContainer);
+  /* ---------------------------- Go back to all games list ---------------------------- */
+  /* ---------------------------- Link To The Game ---------------------------- */
+  const backLinkContainer = createNode("div", {
+    class: "linkBackContainer",
+  });
+
+  const goBackText = createNode("p", {});
+  goBackText.innerText = `You can check the game list again`;
+
+  const backLink = createNode("a", {
+    href: `index.html`,
+    target: "_blank",
+    role: "button",
+    class: "pushBackBtn",
+    title: `Go back to the game list`,
+  });
+  backLink.innerText = `Go back to the game list`;
+  backLinkContainer.appendChild(backLink, goBackText);
+
+  detailsOutput.append(
+    descWrapper,
+    screenshots,
+    addInfoWrapper,
+    linkContainer,
+    backLinkContainer
+  );
 }

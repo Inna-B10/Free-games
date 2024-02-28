@@ -108,7 +108,8 @@ body {
   justify-content: center;
 }
 
-.pushToGameBtn {
+.pushToGameBtn,
+.pushBackBtn {
   text-transform: uppercase;
   color: #fff;
   padding: 10px 40px;
