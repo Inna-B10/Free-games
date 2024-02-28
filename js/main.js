@@ -113,6 +113,7 @@ function updateDisplay(array) {
     case "/JS-API/":
       showGames(array);
       break;
+    case "/details.html":
     case "/JS-API/details.html":
       showGameDetails(array);
       break;

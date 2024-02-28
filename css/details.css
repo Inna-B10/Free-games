@@ -3,17 +3,14 @@
   font-family: "Inter", sans-serif;
  */
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
+  background-color: #0d0b31;
 }
 
 #gameInfoContainer {
