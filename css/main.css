@@ -233,7 +233,7 @@ header h1 {
 
 .card {
   width: 70%;
-  min-width: 200px;
+  /* min-width: 200px; */
   justify-content: space-between;
   gap: 0.3em;
   padding: 0.5em;
