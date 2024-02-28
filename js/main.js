@@ -111,7 +111,9 @@ function showGames(array) {
     });
     const title = createNode("h2", {});
     title.innerText = element.title;
-    const shortDesc = createNode("p", {});
+    const shortDesc = createNode("p", {
+      id: "cardDescription",
+    });
     shortDesc.innerText = element.short_description;
     const details = createNode("div", {
       class: "flex card-details",

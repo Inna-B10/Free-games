@@ -232,11 +232,11 @@ header h1 {
 }
 
 .card {
-  width: 70%;
-  /* min-width: 200px; */
+  width: 90%;
+  min-width: 200px;
   justify-content: space-between;
-  gap: 0.3em;
-  padding: 0.5em;
+  gap: 0.7em;
+  padding: 0.8em;
   background-image: linear-gradient(
     125deg,
     rgba(255, 255, 255, 0.295),
@@ -253,11 +253,11 @@ header h1 {
 }
 
 .card h2 {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   color: #fff;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-wrap: wrap;
   text-align: center;
@@ -284,13 +284,13 @@ header h1 {
   padding: 9px 29px;
   background-image: linear-gradient(to right, #51a3df, #ff8690);
   border-radius: 66.89px;
-  font-size: 0.7rem;
+  font-size: 1.3rem;
   font-weight: 500;
   box-shadow: 1.11px 1.11px 4px rgba(13, 11, 49, 0.6);
 }
 
 .card-details img {
-  height: 20px;
+  height: 30px;
 }
 
 .card-details p {
@@ -298,7 +298,7 @@ header h1 {
   font-family: "Nunito", sans-serif;
   text-transform: lowercase;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 @media (min-width: 450px) {
@@ -308,6 +308,31 @@ header h1 {
     justify-content: space-between;
     gap: 0.3em;
     padding: 0.5em;
+  }
+
+  .card a {
+    margin-top: 2em;
+    margin: 0 auto;
+    padding: 9px 29px;
+    font-size: 0.7rem;
+  }
+
+  .card h2 {
+    max-width: 70%;
+    font-size: 1.1rem;
+  }
+
+  .card-details img {
+    height: 20px;
+  }
+
+  .card-details p {
+  font-size: 1rem;
+}
+
+@media (max-width: 450px) {
+  #cardDescription {
+    display: none;
   }
 }
 
