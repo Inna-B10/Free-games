@@ -31,8 +31,10 @@ export function showGameDetails(array) {
     alt: array.title,
     title: array.title,
   });
+  thumb.classList.add("mainGameImg");
+
   const descDiv = createNode("div", {
-    class: "flex column",
+    class: "flex column gameinfo",
   });
   const title = createNode("h1", {});
   title.innerText = array.title;

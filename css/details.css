@@ -8,28 +8,25 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  background-color: #0d0b31;
-}
-
-#gameInfoContainer {
-  max-width: 100%;
   background-color: #0d0b31;
   color: #fff;
 }
 
-#mainPicture {
+.mainGameImg {
   margin: 0;
   display: flex;
 }
 
-#mainPicture img {
+#detailsOutput img {
   margin: 0;
   width: 100%;
 }
 
-#gameinfo,
+.gameinfo,
 #additionalInfoContainer {
   width: 100%;
   margin: 0 auto;
@@ -45,7 +42,7 @@ body {
   border-image-slice: 1;
 }
 
-#gameinfo h1 {
+.gameinfo h1 {
   max-width: 80%;
   margin: 0 auto;
   padding: 0 0 0.3em 0;
@@ -54,9 +51,10 @@ body {
   text-transform: uppercase;
   line-height: 1;
   color: #ff8690;
+  text-align: center;
 }
 
-#gameinfo p {
+.gameinfo p {
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
 }
