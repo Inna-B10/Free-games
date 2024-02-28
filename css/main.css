@@ -114,8 +114,6 @@ header h1 {
 /* Select plathform line */
 
 #selectPlatform {
-  padding: 0.8em 1em;
-  background-image: linear-gradient(to left, #51a3df, #ff8690);
   color: #fff;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -128,13 +126,47 @@ header h1 {
 }
 
 #selectPlatform p {
-  margin: 0;
+  margin: 0 0 0 3.5em;
 }
 
-/* #selectPlatform img {
-  height: 10px;
+#selectPlatform ul {
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.mobileMenuSelection {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em 1em;
+  background-image: linear-gradient(to left, #51a3df, #ff8690);
+}
+
+.arrowMenu {
+  height: 22px;
   margin: 0 0.1em;
-} */
+}
+
+.dropdownMenu {
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+#selectPlatform li {
+  padding: 1em;
+  background-color: #201e3d;
+  border-bottom: 1px solid #fff;
+}
 
 /* Plathform buttons (web version) */
 

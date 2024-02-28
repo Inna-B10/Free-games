@@ -43,6 +43,29 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
     getGamesData(urlPcGames);
   });
 
+  //choose platform MOBILE VERSION
+
+  const selectPlatformMobile = document.querySelector(".mobileMenuSelection");
+  const dropdownMenuMobile = document.querySelector(".dropdownMenu");
+
+  selectPlatformMobile.addEventListener("click", () => {
+    dropdownMenuMobile.classList.toggle("menu-open");
+  });
+
+  const allGamesMobile = document.getElementById("allGamesMobile");
+  const webGamesMobile = document.getElementById("webGamesMobile");
+  const browserGamesMobile = document.getElementById("browserGamesMobile");
+
+  allGamesMobile.addEventListener("click", () => {
+    getGamesData(urlAllGames);
+  });
+  webGamesMobile.addEventListener("click", () => {
+    getGamesData(urlWebGames);
+  });
+  browserGamesMobile.addEventListener("click", () => {
+    getGamesData(urlPcGames);
+  });
+
   /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
   const menuButton = document.querySelector(".choose");
   const menuLinks = document.querySelector("#platform-buttons");
