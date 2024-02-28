@@ -109,6 +109,8 @@ function showGames(array) {
       alt: element.title,
       title: element.title,
     });
+    thumb.classList.add("thumbImg");
+
     const title = createNode("h2", {});
     title.innerText = element.title;
     const shortDesc = createNode("p", {
