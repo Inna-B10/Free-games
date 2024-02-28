@@ -162,6 +162,11 @@ header h1 {
   opacity: 1;
 }
 
+.menu-close {
+  opacity: 0;
+  display: none;
+}
+
 #selectPlatform li {
   padding: 1em;
   background-color: #201e3d;
