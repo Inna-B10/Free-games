@@ -157,9 +157,11 @@ document.getElementById("searchBTN").oninput = function () {
 
   searchedCards.forEach(function (elem) {
     const title = elem.querySelector("h2").innerText.toLowerCase();
+
     if (value !== "") {
       if (title.search(value) === -1) {
         elem.classList.add("hide");
+        console.log(title);
       } else {
         elem.classList.remove("hide");
       }
@@ -170,3 +172,12 @@ document.getElementById("searchBTN").oninput = function () {
     }
   });
 };
+
+/* ------------------- Filtering Data From API ------------------- */
+
+const filter = document.getElementById("filter-icon");
+
+filter.addEventListener("click", () => {
+  const filterItem = createNode("p", {});
+  filterItem.innerText = element.genre;
+});

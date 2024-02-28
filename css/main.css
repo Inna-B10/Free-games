@@ -247,10 +247,6 @@ header h1 {
   box-shadow: 1.11px 1.11px 4px rgba(13, 11, 49, 0.6);
 }
 
-.card .hide {
-  display: none;
-}
-
 .card-details {
   justify-content: space-between;
   padding: 0 0.3em;
