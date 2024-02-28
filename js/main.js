@@ -57,16 +57,16 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
   const browserGamesMobile = document.getElementById("browserGamesMobile");
 
   allGamesMobile.addEventListener("click", () => {
-    getGamesData(urlAllGames);
     dropdownMenuMobile.classList.toggle("menu-close");
+    getGamesData(urlAllGames);
   });
   webGamesMobile.addEventListener("click", () => {
-    getGamesData(urlWebGames);
     dropdownMenuMobile.classList.toggle("menu-close");
+    getGamesData(urlWebGames);
   });
   browserGamesMobile.addEventListener("click", () => {
-    getGamesData(urlPcGames);
     dropdownMenuMobile.classList.toggle("menu-close");
+    getGamesData(urlPcGames);
   });
 
   /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
