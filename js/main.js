@@ -57,15 +57,15 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
   const browserGamesMobile = document.getElementById("browserGamesMobile");
 
   allGamesMobile.addEventListener("click", () => {
-    dropdownMenuMobile.classList.toggle("menu-close");
+    dropdownMenuMobile.classList.remove("menu-open");
     getGamesData(urlAllGames);
   });
   webGamesMobile.addEventListener("click", () => {
-    dropdownMenuMobile.classList.toggle("menu-close");
+    dropdownMenuMobile.classList.remove("menu-open");
     getGamesData(urlWebGames);
   });
   browserGamesMobile.addEventListener("click", () => {
-    dropdownMenuMobile.classList.toggle("menu-close");
+    dropdownMenuMobile.classList.remove("menu-open");
     getGamesData(urlPcGames);
   });
 
