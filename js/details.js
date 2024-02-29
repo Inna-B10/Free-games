@@ -160,7 +160,7 @@ export function showGameDetails(array) {
   // -------------------------------- Third warning
 
   const warningIconThird = createNode("img", {
-    src: "/images/info-circle.png",
+    src: "./images/info-circle.png",
     alt: "warning info icon",
     id: "warningIconThird",
   });
