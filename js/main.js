@@ -203,15 +203,6 @@ searchBTN.oninput = function () {
   });
 };
 
-/* ------------------- Filtering Data From API ------------------- */
-
-// const filter = document.getElementById("filter-icon");
-
-// filter.addEventListener("click", () => {
-//   const filterItem = createNode("p", {});
-//   filterItem.innerText = element.genre;
-// });
-
 /* ----------- Mobile vesion search ---------- */
 
 const searchButtonMob = document.getElementById("searchIconMob");
@@ -268,3 +259,19 @@ searchField.oninput = function () {
     }
   });
 };
+
+/* ------------------- Filter for WEB ------------------- */
+
+// const filter = document.getElementById("filter-icon");
+
+// filter.addEventListener("click", () => {
+//   const filterContainer = createNode("div", {
+//     id: "filterContainer",
+//   });
+
+//   const filterItem = createNode("p", {
+//     class: "filterItem",
+//   });
+//   filterItem.innerText = `${element.genre}`;
+//   filterContainer.append(filterItem);
+// });

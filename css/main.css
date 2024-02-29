@@ -483,3 +483,8 @@ footer p {
     width: 20%;
   }
 }
+
+#filterContainer {
+  height: 100hv;
+  position: absolute;
+}
