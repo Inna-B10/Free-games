@@ -104,6 +104,20 @@ header h1 {
   height: 25px;
 }
 
+#searchMobile {
+  width: 150%;
+  margin-top: -0.3em;
+  margin-left: -4em;
+  padding: 0.4em 1em;
+  border-radius: 60px;
+  background-color: #0d0b31;
+  border: 1.5px solid #9e9dad;
+  color: #ff8690;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 @media (min-width: 450px) {
   #mobileNav {
     position: relative;
@@ -119,6 +133,7 @@ header h1 {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
+  display: block;
   display: flex;
   flex-direction: column;
   justify-content: center;

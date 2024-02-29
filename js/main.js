@@ -11,8 +11,6 @@ export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
 // console.log(currentLocation);
 
-// const searchInput = document.getElementById("searchBTN");
-
 if (currentLocation === "/" || currentLocation === "/JS-API/") {
   const allGames = document.getElementById("all-games");
   const webGames = document.getElementById("web-games");
@@ -70,13 +68,13 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
   });
 
   /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
-  const menuButton = document.querySelector(".choose");
-  const menuLinks = document.querySelector("#platform-buttons");
+  // const menuButton = document.querySelector(".choose");
+  // const menuLinks = document.querySelector("#platform-buttons");
 
-  menuButton.addEventListener("click", () => {
-    menuLinks.classList.toggle("hidden");
-    menuLinks.classList.toggle("flex");
-  });
+  // menuButton.addEventListener("click", () => {
+  //   menuLinks.classList.toggle("hidden");
+  //   menuLinks.classList.toggle("flex");
+  // });
 }
 
 /* ------------------- Main Function To Get Data From API ------------------- */
@@ -181,10 +179,10 @@ function showGames(array) {
 }
 
 /* ------------------- Searching Data From API ------------------- */
+const searchBTN = document.getElementById("searchBTN");
 
-document.getElementById("searchBTN").oninput = function () {
+searchBTN.oninput = function () {
   const value = this.value.toLowerCase().trim();
-  console.log(value);
   const searchedCards = document.querySelectorAll(".card");
 
   searchedCards.forEach(function (elem) {
@@ -213,3 +211,60 @@ document.getElementById("searchBTN").oninput = function () {
 //   const filterItem = createNode("p", {});
 //   filterItem.innerText = element.genre;
 // });
+
+/* ----------- Mobile vesion search ---------- */
+
+const searchButtonMob = document.getElementById("searchIconMob");
+const filterButtonMob = document.getElementById("filterIconMob");
+const sortButtonMob = document.getElementById("sortIconMob");
+const mobileNav = document.getElementById("mobileNav");
+
+const searchFieldDiv = createNode("div", {});
+const searchField = createNode("input", {
+  type: "search",
+  id: "searchMobile",
+});
+searchFieldDiv.append(searchField);
+mobileNav.append(searchFieldDiv);
+searchFieldDiv.classList.add("hidden");
+
+let isClicked = false;
+
+searchButtonMob.addEventListener("click", () => {
+  if (!isClicked) {
+    console.log("clicked");
+    searchFieldDiv.classList.remove("hidden");
+    filterButtonMob.classList.add("hidden");
+    sortButtonMob.classList.add("hidden");
+    console.log("Button clicked for the first time");
+    isClicked = true;
+  } else {
+    searchFieldDiv.classList.add("hidden");
+    filterButtonMob.classList.remove("hidden");
+    sortButtonMob.classList.remove("hidden");
+    console.log("Button clicked again");
+    isClicked = false; // Reset the state for the next click
+  }
+});
+
+searchField.oninput = function () {
+  const value = this.value.toLowerCase().trim();
+  const searchedCards = document.querySelectorAll(".card");
+
+  searchedCards.forEach(function (elem) {
+    const title = elem.querySelector("h2").innerText.toLowerCase();
+
+    if (value !== "") {
+      if (title.search(value) === -1) {
+        elem.classList.add("hide");
+        console.log(title);
+      } else {
+        elem.classList.remove("hide");
+      }
+    } else {
+      searchedCards.forEach(function (elem) {
+        elem.classList.remove("hide");
+      });
+    }
+  });
+};

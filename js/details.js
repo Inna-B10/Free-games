@@ -176,7 +176,7 @@ export function showGameDetails(array) {
   warningInfoContainer.classList.add("warningInfoContainer");
 
   const warningIcon = createNode("img", {
-    src: "/images/info-circle.png",
+    src: "./images/info-circle.png",
     alt: "warning info icon",
     id: "warningIcon",
   });
@@ -193,7 +193,7 @@ export function showGameDetails(array) {
   // -------------------------------- Second warning
 
   const warningIconSecond = createNode("img", {
-    src: "/images/info-circle.png",
+    src: "./images/info-circle.png",
     alt: "warning info icon",
     id: "warningIconSecond",
   });
