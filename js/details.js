@@ -100,7 +100,6 @@ export function showGameDetails(array) {
   publisherDiv.appendChild(publisherTitle);
   publisherDiv.innerHTML += array.publisher;
   // -------------------------------- Release date
-  //TODO change date format
   const dateDiv = createNode("div", {});
   const dateTitle = createNode("h3", {});
   dateTitle.innerHTML = "Release Date: <br>";
@@ -113,23 +112,82 @@ export function showGameDetails(array) {
   // -------------------------------- Warning info
 
   const warningInfo = createNode("div", {});
+  warningInfo.classList.add("warningInfo");
+
+  // -------------------------------- First warning
+
+  const warningInfoContainer = createNode("div", {
+    id: "warningInfoContainer",
+  });
+  warningInfoContainer.classList.add("warningInfoContainer");
+
+  const warningIcon = createNode("img", {
+    src: "../images/info-circle.png",
+    alt: "warning info icon",
+    id: "warningIcon",
+  });
+  warningIcon.classList.add("warningIcon");
+
   const warningFirst = createNode("p", {
     class: "warning",
   });
+  console.log(warningFirst);
   warningFirst.innerText =
     "Please note this free-to-play game may or may not offer optional in-game purchases.";
+
+  warningInfoContainer.append(warningIcon, warningFirst);
+
+  // -------------------------------- Second warning
+
+  const warningIconSecond = createNode("img", {
+    src: "../images/info-circle.png",
+    alt: "warning info icon",
+    id: "warningIconSecond",
+  });
+  warningIcon.classList.add("warningIcon");
+
+  const warningInfoContainerSecond = createNode("div", {
+    id: "warningInfoContainerSecond",
+  });
+  warningInfoContainer.classList.add("warningInfoContainer");
 
   const warningSecond = createNode("p", {
     class: "warning",
   });
   warningSecond.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`;
 
+  warningInfoContainerSecond.append(warningIconSecond, warningSecond);
+
+  // -------------------------------- Third warning
+
+  const warningIconThird = createNode("img", {
+    src: "../images/info-circle.png",
+    alt: "warning info icon",
+    id: "warningIconThird",
+  });
+  warningIcon.classList.add("warningIcon");
+
+  const warningInfoContainerThird = createNode("div", {
+    id: "warningInfoContainerSecond",
+  });
+  warningInfoContainer.classList.add("warningInfoContainer");
+
   const warningThird = createNode("p", {
     class: "warning",
   });
-  warningThird.innerText = "Requires 3rd-Party Account";
+  warningThird.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`;
 
-  warningInfo.append(warningFirst, warningSecond, warningThird);
+  warningInfoContainerThird.append(warningIconThird, warningThird);
+
+  /* ---------------------------- Appending everything in warningInfo ---------------------------- */
+
+  warningInfo.append(
+    warningInfoContainer,
+    warningInfoContainerSecond,
+    warningInfoContainerThird
+  );
+
+  /* ---------------------------- Appending all parts to main div ---------------------------- */
 
   addInfoWrapper.append(addInfoTitle, addInfoDiv, warningInfo);
 
@@ -164,7 +222,7 @@ export function showGameDetails(array) {
     title: `Go back to the game list`,
   });
   backLink.innerText = `Go back to the game list`;
-  backLinkContainer.appendChild(backLink, goBackText);
+  backLinkContainer.append(goBackText, backLink);
 
   detailsOutput.append(
     descWrapper,
