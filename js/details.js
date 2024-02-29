@@ -25,6 +25,7 @@ export function showGameDetails(array) {
   /* ------------------------- Thumb+title+description ------------------------ */
   const descWrapper = createNode("div", {
     class: "flex",
+    id: "descWrapper",
   });
   const thumb = createNode("img", {
     src: array.thumbnail,
@@ -45,26 +46,74 @@ export function showGameDetails(array) {
   descDiv.append(title, descText);
   descWrapper.append(thumb, descDiv);
   /* ------------------------------ Screenshots; ------------------------------ */
-  let screenshots = "";
-  if (array.screenshots.length > 0) {
-    screenshots = createNode("div", {
-      class: "flex screenshots",
-    });
-    //width of screenshots
-    const width = 100 / array.screenshots.length;
+  const screenshots = createNode("div", {
+    id: "screenshots",
+    class: "screenshots",
+  });
 
-    array.screenshots.forEach((element) => {
-      const img = createNode("img", {
-        src: element.image,
-        style: "width:20vw",
-      });
-      screenshots.appendChild(img);
+  array.screenshots.forEach((element) => {
+    const screenDiv = createNode("div", {
+      id: "screenDiv",
     });
-  }
+    const img = createNode("img", {
+      src: element.image,
+      class: "sliderIMG",
+    });
+    screenDiv.append(img);
+    screenshots.append(screenDiv);
+  });
+
+  /* ------------------------------ Arrow-buttons  ------------------------------ */
+
+  // const sliderArrowsContainer = createNode("div", {
+  //   id: "sliderArrowsContainer",
+  // });
+
+  // const sliderArrowLeft = createNode("img", {
+  //   src: "/images/arrowLeft.png",
+  // });
+  // sliderArrowLeft.classList.add("sliderArrow");
+  // const sliderArrowRight = createNode("img", {
+  //   src: "/images/arrowRight.png",
+  // });
+  // sliderArrowRight.classList.add("sliderArrow");
+
+  // sliderArrowsContainer.append(sliderArrowLeft, sliderArrowRight);
+
+  // screenshots.append(sliderArrowsContainer);
+
+  // sliderArrowRight.addEventListener("click", () => {
+  //   screenshots.classList.add("scrollRight");
+  // });
+
+  /* ------------------------------ Slider settings ------------------------------ */
+
+  // let currentSlideIndex = 0;
+
+  // function showSlide() {
+  //   img[currentSlideIndex].classList.add("block");
+  // }
+
+  // function hideSlide() {
+  //   img[currentSlideIndex].classList.remove("block");
+  // }
+
+  // function showNextSlide() {
+  //   hideSlide();
+  //   currentSlideIndex++;
+  //   if (currentSlideIndex > img.length - 1) {
+  //     currentSlideIndex = 0;
+  //     showSlide();
+  //   }
+  // }
+
+  // sliderArrowRight.addEventListener("click", showNextSlide());
+
   /* ------------------------- Additional Information ------------------------- */
   const addInfoWrapper = createNode("div", {
     class: "flex, column additionalInfoContainer",
   });
+
   const addInfoTitle = createNode("h2", {
     class: "text-center",
   });
@@ -72,6 +121,11 @@ export function showGameDetails(array) {
   const addInfoDiv = createNode("div", {
     class: "flex addInfoDiv",
   });
+
+  const addInfoCon = createNode("div", {
+    class: "addInfo",
+  });
+
   const divLeft = createNode("div", {
     class: "flex column",
   });
@@ -188,7 +242,8 @@ export function showGameDetails(array) {
 
   /* ---------------------------- Appending all parts to main div ---------------------------- */
 
-  addInfoWrapper.append(addInfoTitle, addInfoDiv, warningInfo);
+  addInfoCon.append(addInfoDiv, warningInfo);
+  addInfoWrapper.append(addInfoTitle, addInfoCon);
 
   /* ---------------------------- Link To The Game ---------------------------- */
   const linkContainer = createNode("div", {
