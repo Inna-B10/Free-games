@@ -56,5 +56,6 @@ a {
     bottom: 7%;
     left: 68%;
     cursor: pointer;
+    display: none;
   }
 }
