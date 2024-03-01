@@ -377,3 +377,25 @@ footer p {
 #searchMobile {
   display: none;
 }
+
+footer {
+  position: relative;
+}
+
+#scrollToTopBtn {
+  position: absolute;
+  width: 120px;
+  bottom: 90%;
+  left: 83%;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  #scrollToTopBtn {
+    position: absolute;
+    width: 120px;
+    bottom: 90%;
+    left: 63%;
+    cursor: pointer;
+  }
+}
