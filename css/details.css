@@ -306,6 +306,8 @@ body {
   font-weight: 700;
   text-decoration: none;
   font-family: "Inter", sans-serif;
+  width: 80%;
+  text-align: center;
 }
 
 .linkBackContainer {
@@ -370,4 +372,8 @@ footer p {
   footer p {
     width: 20%;
   }
+}
+
+#searchMobile {
+  display: none;
 }
