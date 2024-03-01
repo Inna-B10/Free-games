@@ -207,6 +207,11 @@ header h1 {
     text-transform: uppercase;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+  }
+
+  #platform-buttons button:hover {
+    color: #ffe4e6;
   }
 
   .plathform-button-with-icon {

@@ -81,6 +81,9 @@ if (currentLocation === "/" || currentLocation === "/JS-API/") {
 export async function getGamesData(url) {
   const options = {
     method: "GET",
+    params: {
+      "sort-by": "alphabetical",
+    },
     headers: {
       "X-RapidAPI-Key": "bcfe5a59efmsh9f6626c627741d7p1468f3jsnf0bd5aa9c906",
       "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
@@ -148,7 +151,7 @@ function showGames(array) {
 
     const readMore = createNode("a", {
       href: `details.html?id=${element.id}`,
-      target: "_blank",
+      // target: "_blank",
       role: "button",
     });
     readMore.innerText = "Read more";
@@ -260,18 +263,31 @@ searchField.oninput = function () {
   });
 };
 
-/* ------------------- Filter for WEB ------------------- */
+/* ------------------- Sorting for WEB ------------------- */
 
-// const filter = document.getElementById("filter-icon");
+const sortIcon = document.getElementById("sort-icon");
 
-// filter.addEventListener("click", () => {
-//   const filterContainer = createNode("div", {
-//     id: "filterContainer",
+// function showSortedGames(array) {
+//   array = array.sort((a, b) => {
+//     if (a.id > b.id) {
+//       return -1;
+//     } else if (a.id < b.id) {
+//       return 1;
+//     } else {
+//       return 0;
+//     }
 //   });
+// }
 
-//   const filterItem = createNode("p", {
-//     class: "filterItem",
-//   });
-//   filterItem.innerText = `${element.genre}`;
-//   filterContainer.append(filterItem);
-// });
+sortIcon.addEventListener("click", () => {
+  console.log("sorting is clicked");
+  array.sort(function (a, b) {
+    if (a.title > b.title) {
+      return -1;
+    }
+    if (a.title > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+});
