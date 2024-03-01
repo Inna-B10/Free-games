@@ -7,6 +7,7 @@ console.log(urlApi);
 const urlAllGames = urlApi.concat("/games");
 const urlWebGames = urlApi.concat("/games?platform=browser");
 const urlPcGames = urlApi.concat("/games?platform=pc");
+const urlSorted = urlApi.concat("/games?sort-by=alphabetical");
 export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
 // console.log(currentLocation);
@@ -275,27 +276,37 @@ searchField.oninput = function () {
 
 const sortIcon = document.getElementById("sort-icon");
 
-// function showSortedGames(array) {
-//   array = array.sort((a, b) => {
-//     if (a.id > b.id) {
-//       return -1;
-//     } else if (a.id < b.id) {
-//       return 1;
-//     } else {
-//       return 0;
-//     }
-//   });
-// }
+let sortIsClicked = false;
 
 sortIcon.addEventListener("click", () => {
   console.log("sorting is clicked");
-  array.sort(function (a, b) {
-    if (a.title > b.title) {
-      return -1;
-    }
-    if (a.title > b.name) {
-      return 1;
-    }
-    return 0;
-  });
+
+  if (!sortIsClicked) {
+    console.log("clicked");
+    getGamesData(urlSorted);
+    sortIsClicked = true;
+  } else {
+    console.log("Button clicked again");
+    getGamesData(urlAllGames);
+    sortIsClicked = false;
+  }
+});
+
+/* ------------------- Sorting for Mobile ------------------- */
+
+const sortIconMob = document.getElementById("sortIconMob");
+
+let sortMobIsClicked = false;
+
+sortIconMob.addEventListener("click", () => {
+  console.log("sorting is clicked");
+  if (!sortMobIsClicked) {
+    console.log("clicked");
+    getGamesData(urlSorted);
+    sortMobIsClicked = true;
+  } else {
+    console.log("Button clicked again");
+    getGamesData(urlAllGames);
+    sortMobIsClicked = false;
+  }
 });

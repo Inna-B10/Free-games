@@ -211,7 +211,7 @@ header h1 {
   }
 
   #platform-buttons button:hover {
-    color: #ffe4e6;
+    color: #ff8690;
   }
 
   .plathform-button-with-icon {
@@ -243,6 +243,11 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  #navButtonsWeb img,
+  #navButtonsWeb input {
+    cursor: pointer;
   }
 
   #search-field-web {
@@ -329,6 +334,13 @@ header h1 {
 
 .card img {
   border-radius: 6px 6px 0px 0px;
+}
+
+.readMoreContainer {
+  padding: 0.7em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card a {
