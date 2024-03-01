@@ -141,20 +141,27 @@ function showGames(array) {
 
     const title = createNode("h2", {});
     title.innerText = element.title;
+
     const shortDesc = createNode("p", {
       id: "cardDescription",
     });
     shortDesc.innerText = element.short_description;
+
+    const bottomCardContainer = createNode("div", {});
     const details = createNode("div", {
       class: "flex card-details",
     });
 
+    const readMoreContainer = createNode("div", {
+      class: "readMoreContainer",
+    });
     const readMore = createNode("a", {
       href: `details.html?id=${element.id}`,
       // target: "_blank",
       role: "button",
     });
     readMore.innerText = "Read more";
+    readMoreContainer.appendChild(readMore);
 
     const platformArray = element.platform.split(", ");
     platformArray.map((item) => {
@@ -176,7 +183,8 @@ function showGames(array) {
     genre.innerText = element.genre;
 
     details.appendChild(genre);
-    card.append(thumb, title, shortDesc, readMore, details);
+    bottomCardContainer.append(readMoreContainer, details);
+    card.append(thumb, title, shortDesc, bottomCardContainer);
     output.appendChild(card);
   });
 }

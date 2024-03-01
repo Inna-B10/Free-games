@@ -369,8 +369,14 @@ header h1 {
     border-color: rgba(255, 134, 144, 0.591);
   }
 
+  .readMoreContainer {
+    padding: 0.7em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .card a {
-    margin-top: 2em;
     margin: 0 auto;
     padding: 9px 29px;
     font-size: 0.7rem;
