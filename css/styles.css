@@ -36,3 +36,15 @@ a {
 .hide {
   display: none;
 }
+
+#info-section {
+  position: relative;
+}
+
+#scrollToTopBtn {
+  position: absolute;
+  width: 120px;
+  bottom: 7%;
+  left: 87%;
+  cursor: pointer;
+}
