@@ -48,3 +48,13 @@ a {
   left: 87%;
   cursor: pointer;
 }
+
+@media (min-width: 450px) {
+  #scrollToTopBtn {
+    position: absolute;
+    width: 120px;
+    bottom: 7%;
+    left: 70%;
+    cursor: pointer;
+  }
+}
