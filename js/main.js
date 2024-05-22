@@ -86,7 +86,7 @@ export async function getGamesData(url) {
       "sort-by": "alphabetical",
     },
     headers: {
-      "X-RapidAPI-Key": "bcfe5a59efmsh9f6626c627741d7p1468f3jsnf0bd5aa9c906",
+      "X-RapidAPI-Key": "33120feaa4msh71483202838c8c0p16d147jsn93fde0d94277",
       "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
     },
   };
