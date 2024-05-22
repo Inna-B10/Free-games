@@ -12,7 +12,7 @@ export const output = document.getElementById("output");
 export const currentLocation = window.location.pathname;
 // console.log(currentLocation);
 
-if (currentLocation === "/" || currentLocation === "/JS-API/") {
+if (currentLocation === "/" || currentLocation === "/JS-API-PROJECT/") {
   const allGames = document.getElementById("all-games");
   const webGames = document.getElementById("web-games");
   const pcGames = document.getElementById("pc-games");
@@ -112,11 +112,11 @@ function updateDisplay(array) {
   /* Updated switchcase */
   switch (currentLocation) {
     case "/":
-    case "/JS-API/":
+    case "/JS-API-PROJECT/":
       showGames(array);
       break;
     case "/details.html":
-    case "/JS-API/details.html":
+    case "/JS-API-PROJECT/details.html":
       showGameDetails(array);
       break;
   }
