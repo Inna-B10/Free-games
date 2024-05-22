@@ -5,7 +5,7 @@ const detailsOutput = document.getElementById("detailsOutput");
 
 /* ----------------------- Get Details Of Current Game ---------------------- */
 if (
-  window.location.pathname === "/JS-API/details.html" ||
+  window.location.pathname === "/JS-API-PROJECT/details.html" ||
   window.location.pathname === "/details.html"
 ) {
   const gameId = window.location.href.split("=")[1];
@@ -269,7 +269,7 @@ export function showGameDetails(array) {
   goBackText.innerText = `You can check the game list again`;
 
   const backLink = createNode("a", {
-    href: `/` || `JS-API`,
+    href: `/` || `JS-API-PROJECT`,
     // target: "_blank",
     role: "button",
     class: "pushBackBtn",
