@@ -270,7 +270,7 @@ export function showGameDetails(array) {
 
 	const backLink = createNode('a', {
 		// href: '/', //local
-		href: '/JS-API-PROJECT', //online
+		href: './', //online
 		role: 'button',
 		class: 'pushBackBtn',
 		title: `Go back to the game list`
