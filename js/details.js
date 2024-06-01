@@ -269,8 +269,7 @@ export function showGameDetails(array) {
 	goBackText.innerText = `You can check the game list again`
 
 	const backLink = createNode('a', {
-		// href: '/', //local
-		href: './', //online
+		href: './',
 		role: 'button',
 		class: 'pushBackBtn',
 		title: `Go back to the game list`
