@@ -267,7 +267,7 @@ export function showGameDetails(array) {
 
 	const goBackText = createNode('p', {})
 	goBackText.innerText = `You can check the game list again`
-	//!FIX link back
+
 	const backLink = createNode('a', {
 		// href: '/', //local
 		href: '/JS-API-PROJECT', //online
