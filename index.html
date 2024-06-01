@@ -1,118 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ---------------------------- Google Fonts ----------------------------- -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ----------------------------------------------------------------------- -->
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script type="module" src="./js/main.js"></script>
-    <title>Free Games</title>
-  </head>
-  <body>
-    <!-- ------------- HEADER ------------------ -->
-    <header>
-      <div id="header">
-        <div class="header-title">
-          <h1>Explore</h1>
-          <h2>free games</h2>
-        </div>
-        <p>
-          Check out collection of awesome free games. All free games are here.
-        </p>
-        <a href="#selectPlatform">Find your game</a>
-      </div>
-    </header>
-    <!-- ------------- HEADER IS OVER ------------------ -->
-    <!-- ------------- FIXED NAV BAR FOR MOBILE VERSION ------------------ -->
-    <div class="sticky flex" id="mobileNav">
-      <img
-        src="./images/search.png"
-        alt="search icon"
-        title="Search game by name"
-        class="stikyNavBtn"
-        id="searchIconMob"
-      />
-      <img
-        src="./images/filter.png"
-        alt="filter icon"
-        title="Filter games by:"
-        class="stikyNavBtn"
-        id="filterIconMob"
-      />
-      <img
-        src="./images/sort.png"
-        alt="sort icon"
-        title="Sort games by:"
-        class="stikyNavBtn"
-        id="sortIconMob"
-      />
-    </div>
-    <!-- ------------- FIXED NAV BAR FOR MOBILE VERSION IS OVER ------------------ -->
-    <!-- ------------- SELECT PLATHFORM FOR MOBILE VERSION ------------------ -->
-    <div id="selectPlatform">
-      <div class="mobileMenuSelection">
-        <p>Select platform</p>
-        <img src="./images/arrow.png" alt="" class="arrowMenu" />
-      </div>
-      <ul class="dropdownMenu">
-        <li id="allGamesMobile">All games</li>
-        <li id="browserGamesMobile">Browser games</li>
-        <li id="webGamesMobile">Web Games</li>
-      </ul>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- ---------------------------- Google Fonts ----------------------------- -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet" />
+		<!-- ----------------------------------------------------------------------- -->
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script type="module" src="./js/main.js"></script>
+		<title>Free Games</title>
+	</head>
+	<body>
+		<!-- ------------- HEADER ------------------ -->
+		<header>
+			<div id="header">
+				<div class="header-title">
+					<h1>Explore</h1>
+					<h2>free games</h2>
+				</div>
+				<p>
+					Check out collection of awesome free games. All free games are here.
+				</p>
+				<a href="#selectPlatform">Find your game</a>
+			</div>
+		</header>
+		<!-- ------------- HEADER IS OVER ------------------ -->
+		<!-- ------------- FIXED NAV BAR FOR MOBILE VERSION ------------------ -->
+		<div class="sticky flex" id="mobileNav">
+			<img
+				src="./images/search.png"
+				alt="search icon"
+				title="Search game by name"
+				class="stikyNavBtn"
+				id="searchIconMob" />
+			<img
+				src="./images/filter.png"
+				alt="filter icon"
+				title="Filter games by:"
+				class="stikyNavBtn"
+				id="filterIconMob" />
+			<img
+				src="./images/sort.png"
+				alt="sort icon"
+				title="Sort games by:"
+				class="stikyNavBtn"
+				id="sortIconMob" />
+		</div>
+		<!-- ------------- FIXED NAV BAR FOR MOBILE VERSION IS OVER ------------------ -->
+		<!-- ------------- SELECT PLATFORM FOR MOBILE VERSION ------------------ -->
+		<div id="selectPlatform">
+			<div class="mobileMenuSelection">
+				<p>Select platform</p>
+				<img src="./images/arrow.png" alt="" class="arrowMenu" />
+			</div>
+			<ul class="dropdownMenu">
+				<li id="allGamesMobile">All games</li>
+				<li id="browserGamesMobile">Browser games</li>
+				<li id="webGamesMobile">Web Games</li>
+			</ul>
 
-      <!-- <img src="images/info.png" alt="" class="choose" /> -->
-    </div>
-    <!-- ------------- SELECT PLATHFORM FOR MOBILE VERSION IS OVER ------------------ -->
-    <!-- ------------- SELECT PLATHFORM FOR WEB VERSION ------------------ -->
-    <div id="platform-buttons" class="hidden">
-      <div class="plathform-button-with-icon">
-        <img src="./images/windows.png" alt="" />
-        <button id="pc-games">PC (Windows)</button>
-      </div>
-      <button id="all-games">All games</button>
-      <div class="plathform-button-with-icon">
-        <img src="./images/web.png" alt="" />
-        <button id="web-games">Web Browser</button>
-      </div>
-    </div>
-    <!-- ------------- SELECT PLATHFORM FOR WEB VERSION IS OVER ------------------ -->
-    <!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
-    <div id="navButtonsWeb">
-      <div class="empty-field"></div>
-      <div id="search-field-web" class="navButtonsWebSide">
-        <img src="./images/search-web.png" alt="" />
-        <input type="search" id="searchBTN" />
-      </div>
-      <div id="filter-and-sorting-field" class="navButtonsWebSide">
-        <img src="./images/filter-web.png" alt="" id="filter-icon" />
-        <img src="./images/sort-web.png" alt="" id="sort-icon" />
-      </div>
-    </div>
-    <!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
-    <!-- Added with JS -->
-    <div id="output" class="flex"></div>
-    <!-- Added with JS -->
-    <section id="info-section">
-      <div class="info-section-text">
-        <h2>Find your game</h2>
-        <p>
-          Want to learn more about a specific game? No problem! Here you can
-          find detailed descriptions and reviews provide all the information you
-          need to make an informed decision.
-        </p>
-      </div>
-      <img src="./images/Scroll to top button.png" alt="" id="scrollToTopBtn" />
-    </section>
-    <footer>
-      <p>Copyright @ All trademarks are property of their respective owners.</p>
-    </footer>
-  </body>
+			<!-- <img src="images/info.png" alt="" class="choose" /> -->
+		</div>
+		<!-- ------------- SELECT PLATFORM FOR MOBILE VERSION IS OVER ------------------ -->
+		<!-- ------------- SELECT PLATFORM FOR WEB VERSION ------------------ -->
+		<div id="platform-buttons" class="hidden">
+			<div class="plathform-button-with-icon">
+				<img src="./images/windows.png" alt="" />
+				<button id="pc-games">PC (Windows)</button>
+			</div>
+			<button id="all-games">All games</button>
+			<div class="plathform-button-with-icon">
+				<img src="./images/web.png" alt="" />
+				<button id="web-games">Web Browser</button>
+			</div>
+		</div>
+		<!-- ------------- SELECT PLATFORM FOR WEB VERSION IS OVER ------------------ -->
+		<!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
+		<div id="navButtonsWeb">
+			<div class="empty-field"></div>
+			<div id="search-field-web" class="navButtonsWebSide">
+				<img src="./images/search-web.png" alt="" />
+				<input type="search" id="searchBTN" />
+			</div>
+			<div id="filter-and-sorting-field" class="navButtonsWebSide">
+				<img src="./images/filter-web.png" alt="" id="filter-icon" />
+				<img src="./images/sort-web.png" alt="" id="sort-icon" />
+			</div>
+		</div>
+		<!-- ------------- NAV BAR FOR WEB VERSION ------------------ -->
+		<!-- Added with JS -->
+		<div id="output" class="flex"></div>
+		<!-- Added with JS -->
+		<section id="info-section">
+			<div class="info-section-text">
+				<h2>Find your game</h2>
+				<p>
+					Want to learn more about a specific game? No problem! Here you can
+					find detailed descriptions and reviews provide all the information you
+					need to make an informed decision.
+				</p>
+			</div>
+			<img
+				src="./images/Scroll to top button.png"
+				alt="Go to top button"
+				title="Go to top"
+				id="scrollToTopBtn" />
+		</section>
+		<footer>
+			<p>Copyright @ All trademarks are property of their respective owners.</p>
+		</footer>
+	</body>
 </html>

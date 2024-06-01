@@ -1,61 +1,70 @@
 *,
 *::after,
 *::before {
-  /* margin: 0;
+	/* margin: 0;
   padding: 0; */
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-size: 16.72px;
+	font-size: 16.72px;
 }
 
 .flex {
-  display: flex;
+	display: flex;
 }
 
 .column {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 h1,
 h2,
 a {
-  font-family: "Inter", sans-serif;
-  text-wrap: nowrap;
+	font-family: 'Inter', sans-serif;
+	text-wrap: nowrap;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 #info-section {
-  position: relative;
+	position: relative;
 }
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   position: absolute;
   width: 120px;
   bottom: 7%;
   left: 87%;
   cursor: pointer;
+} */
+#scrollToTopBtn {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	width: 120px;
+	bottom: 7%;
+	left: 87%;
+	cursor: pointer;
 }
 
-@media (max-width: 450px) {
-  #scrollToTopBtn {
-    position: absolute;
-    width: 120px;
-    bottom: 7%;
-    left: 68%;
-    cursor: pointer;
-    display: none;
-  }
-}
+/* @media (max-width: 450px) {
+	#scrollToTopBtn {
+		position: absolute;
+		width: 120px;
+		bottom: 7%;
+		left: 68%;
+		cursor: pointer;
+		display: none;
+	}
+} */
