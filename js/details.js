@@ -19,8 +19,7 @@ if (
 
 /* -------------------- Create HTML Elements (Details Page) ------------------- */
 export function showGameDetails(array) {
-	// const titlePage = document.getElementById("title");
-	// titlePage.innerText = array.title;
+	document.title = array.title
 
 	/* ------------------------- Thumb+title+description ------------------------ */
 	const descWrapper = createNode('div', {
