@@ -23,12 +23,11 @@ if (
 	const webGames = document.getElementById('web-games')
 	const pcGames = document.getElementById('pc-games')
 
-	//display All games by default
+	// ---------------------- Display All Games By Default
 	getGamesData(urlAllGames)
 	allGames.classList.add('specialColor')
 
-	//choose platform
-
+	// ----------------------------------- Choose Platform
 	allGames.addEventListener('click', () => {
 		webGames.classList.remove('specialColor')
 		pcGames.classList.remove('specialColor')
@@ -48,8 +47,7 @@ if (
 		getGamesData(urlPcGames)
 	})
 
-	//choose platform MOBILE VERSION
-
+	// -------------------- Choose Platform MOBILE VERSION
 	const selectPlatformMobile = document.querySelector('.mobileMenuSelection')
 	const dropdownMenuMobile = document.querySelector('.dropdownMenu')
 
@@ -74,7 +72,7 @@ if (
 		getGamesData(urlPcGames)
 	})
 
-	/* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
+	/* ---------- Show / Hide Platform Menu (Standart/mobile Version) --------- */
 	// const menuButton = document.querySelector(".choose");
 	// const menuLinks = document.querySelector("#platform-buttons");
 
@@ -114,7 +112,6 @@ export async function getGamesData(url) {
 }
 
 /* ----------------------- Display Data On The Screen ----------------------- */
-
 function updateDisplay(array) {
 	/* Updated switch case */
 	switch (currentLocation) {
@@ -199,7 +196,7 @@ function showGames(array) {
 	})
 }
 
-/* ------------------- Searching Data From API ------------------- */
+/* ------------------------- Searching Data From API ------------------------ */
 const searchBTN = document.getElementById('searchBTN')
 
 searchBTN.oninput = function () {
@@ -212,7 +209,7 @@ searchBTN.oninput = function () {
 		if (value !== '') {
 			if (title.search(value) === -1) {
 				elem.classList.add('hide')
-				console.log(title)
+				//console.log(title)
 			} else {
 				elem.classList.remove('hide')
 			}
@@ -224,8 +221,7 @@ searchBTN.oninput = function () {
 	})
 }
 
-/* ----------- Mobile version search ---------- */
-
+/* -------------------------- Mobile Version Search ------------------------- */
 const searchButtonMob = document.getElementById('searchIconMob')
 const filterButtonMob = document.getElementById('filterIconMob')
 const sortButtonMob = document.getElementById('sortIconMob')
@@ -280,9 +276,8 @@ searchField.oninput = function () {
 		}
 	})
 }
-
-/* ------------------- Sorting for WEB ------------------- */
-
+//!FIX SORTING, MORE OPTIONS? NEED 2 VERSIONS BUTTON??
+/* ----------------------------- Sorting For WEB ---------------------------- */
 const sortIcon = document.getElementById('sort-icon')
 
 let sortIsClicked = false
@@ -301,8 +296,7 @@ sortIcon.addEventListener('click', () => {
 	}
 })
 
-/* ------------------- Sorting for Mobile ------------------- */
-
+/* --------------------------- Sorting For Mobile --------------------------- */
 const sortIconMob = document.getElementById('sortIconMob')
 
 let sortMobIsClicked = false
@@ -320,13 +314,7 @@ sortIconMob.addEventListener('click', () => {
 	}
 })
 
-// let scrollToTopBtn = document.querySelector('scrollToTopBtn')
-// let options = { top: 0, left: 0, behavior: 'smooth' } // left and top are coordinates
-// scrollToTopBtn.addEventListener('click', () => {
-// 	window.scroll(options)
-// })
-
-// When the user scrolls down 20px from the top of the document, show the button
+/* ------------------------------ To Top Button ----------------------------- */
 window.onscroll = function () {
 	displayScrollBtn()
 }
@@ -338,13 +326,6 @@ function displayScrollBtn() {
 		: (scrollToTopBtn.style.display = 'none')
 }
 
-// When the user clicks on the button, scroll to the top of the document
-// function scrollToTop() {
-// 	$('html, body').animate({ scrollTop: 0 }, 'slow')
-// }
-
 scrollToTopBtn.addEventListener('click', () => {
-	// document.body.scrollTop = 0 // For Safari
-	// document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
 	window.scrollTo({ top: 0, behavior: 'smooth' })
 })

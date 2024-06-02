@@ -17,11 +17,11 @@ if (
 	getGamesData(gameDetailsUrl)
 }
 
-/* -------------------- Create HTML Elements (Details Page) ------------------- */
+/* ------------------- Create HTML Elements (Details Page) ------------------ */
 export function showGameDetails(array) {
 	document.title = array.title
 
-	/* ------------------------- Thumb+title+description ------------------------ */
+	/* ------------------------ Thumb+title+description ----------------------- */
 	const descWrapper = createNode('div', {
 		class: 'flex',
 		id: 'descWrapper'
@@ -44,7 +44,8 @@ export function showGameDetails(array) {
 
 	descDiv.append(title, descText)
 	descWrapper.append(thumb, descDiv)
-	/* ------------------------------ Screenshots; ------------------------------ */
+
+	/* ----------------------------- Screenshots; ----------------------------- */
 	const screenshots = createNode('div', {
 		id: 'screenshots',
 		class: 'screenshots'
@@ -62,7 +63,7 @@ export function showGameDetails(array) {
 		screenshots.append(screenDiv)
 	})
 
-	/* ------------------------------ Arrow-buttons  ------------------------------ */
+	/* ----------------------------- Arrow-buttons ---------------------------- */
 
 	// const sliderArrowsContainer = createNode("div", {
 	//   id: "sliderArrowsContainer",
@@ -85,7 +86,7 @@ export function showGameDetails(array) {
 	//   screenshots.classList.add("scrollRight");
 	// });
 
-	/* ------------------------------ Slider settings ------------------------------ */
+	/* --------------------------- Slider settings ---------------------------- */
 
 	// let currentSlideIndex = 0;
 
@@ -108,7 +109,7 @@ export function showGameDetails(array) {
 
 	// sliderArrowRight.addEventListener("click", showNextSlide());
 
-	/* ------------------------- Additional Information ------------------------- */
+	/* ------------------------ Additional Information ------------------------ */
 	const addInfoWrapper = createNode('div', {
 		class: 'flex, column additionalInfoContainer'
 	})
@@ -128,12 +129,14 @@ export function showGameDetails(array) {
 	const divLeft = createNode('div', {
 		class: 'flex column'
 	})
+
 	// -------------------------------- Platform
 	const platformDiv = createNode('div', {})
 	const platformTitle = createNode('h3', {})
 	platformTitle.innerHTML = 'Platform: <br>'
 	platformDiv.appendChild(platformTitle)
 	platformDiv.innerHTML += array.platform
+
 	// -------------------------------- Genre
 	const genreDiv = createNode('div', {})
 	const genreTitle = createNode('h3', {})
@@ -146,12 +149,14 @@ export function showGameDetails(array) {
 	const divRight = createNode('div', {
 		class: 'flex column'
 	})
+
 	// -------------------------------- Publisher
 	const publisherDiv = createNode('div', {})
 	const publisherTitle = createNode('h3', {})
 	publisherTitle.innerHTML = 'Publisher: <br>'
 	publisherDiv.appendChild(publisherTitle)
 	publisherDiv.innerHTML += array.publisher
+
 	// -------------------------------- Release date
 	const dateDiv = createNode('div', {})
 	const dateTitle = createNode('h3', {})
@@ -163,12 +168,10 @@ export function showGameDetails(array) {
 	addInfoDiv.append(divLeft, divRight)
 
 	// -------------------------------- Warning info
-
 	const warningInfo = createNode('div', {})
 	warningInfo.classList.add('warningInfo')
 
 	// -------------------------------- First warning
-
 	const warningInfoContainer = createNode('div', {
 		id: 'warningInfoContainer'
 	})
@@ -190,7 +193,6 @@ export function showGameDetails(array) {
 	warningInfoContainer.append(warningIcon, warningFirst)
 
 	// -------------------------------- Second warning
-
 	const warningIconSecond = createNode('img', {
 		src: './images/info-circle.png',
 		alt: 'warning info icon',
@@ -211,7 +213,6 @@ export function showGameDetails(array) {
 	warningInfoContainerSecond.append(warningIconSecond, warningSecond)
 
 	// -------------------------------- Third warning
-
 	const warningIconThird = createNode('img', {
 		src: './images/info-circle.png',
 		alt: 'warning info icon',
@@ -231,20 +232,18 @@ export function showGameDetails(array) {
 
 	warningInfoContainerThird.append(warningIconThird, warningThird)
 
-	/* ---------------------------- Appending everything in warningInfo ---------------------------- */
-
+	/* ---------------- Appending everything in warningInfo ------------------- */
 	warningInfo.append(
 		warningInfoContainer,
 		warningInfoContainerSecond,
 		warningInfoContainerThird
 	)
 
-	/* ---------------------------- Appending all parts to main div ---------------------------- */
-
+	/* ---------------- Appending all parts to main div ----------------------- */
 	addInfoCon.append(addInfoDiv, warningInfo)
 	addInfoWrapper.append(addInfoTitle, addInfoCon)
 
-	/* ---------------------------- Link To The Game ---------------------------- */
+	/* -------------------------- Link To The Game ---------------------------- */
 	const linkContainer = createNode('div', {
 		class: 'linkContainer'
 	})
@@ -258,8 +257,7 @@ export function showGameDetails(array) {
 	link.innerText = `Play ${array.title}`
 	linkContainer.appendChild(link)
 
-	/* ---------------------------- Go back to all games list ---------------------------- */
-	/* ---------------------------- Link To The Game ---------------------------- */
+	/* ------------------- Go back to all games list -------------------------- */
 	const backLinkContainer = createNode('div', {
 		class: 'linkBackContainer'
 	})
