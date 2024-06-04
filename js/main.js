@@ -190,11 +190,21 @@ function showGames(array) {
 			details.appendChild(platform)
 		})
 		const genre = createNode('p', {})
-		console.log(element.genre)
-		genre.innerText = element.genre
+
+		const genreTagArray = element.genre.split(' ')
+
+		if (genreTagArray.length === 1) {
+			genre.innerText = element.genre
+		} else {
+			if (genreTagArray[1].toLowerCase() === 'game') {
+				genre.innerText = genreTagArray[0]
+			} else {
+				genre.innerText = genreTagArray[0] + '-' + genreTagArray[1]
+			}
+		}
 
 		genre.addEventListener('click', () => {
-			getGamesData(urlAllGames + '?category=' + element.genre)
+			getGamesData(urlAllGames + '?category=' + genre.innerText)
 		})
 		details.appendChild(genre)
 		bottomCardContainer.append(readMoreContainer, details)
@@ -262,17 +272,17 @@ let isClicked = false
 
 searchButtonMob.addEventListener('click', () => {
 	if (!isClicked) {
-		console.log('clicked')
+		// console.log('clicked')
 		searchFieldDiv.classList.remove('hidden')
 		filterButtonMob.classList.add('hidden')
 		sortButtonMob.classList.add('hidden')
-		console.log('Button clicked for the first time')
+		// console.log('Button clicked for the first time')
 		isClicked = true
 	} else {
 		searchFieldDiv.classList.add('hidden')
 		filterButtonMob.classList.remove('hidden')
 		sortButtonMob.classList.remove('hidden')
-		console.log('Button clicked again')
+		// console.log('Button clicked again')
 		isClicked = false // Reset the state for the next click
 	}
 })
@@ -287,7 +297,7 @@ searchField.oninput = function () {
 		if (value !== '') {
 			if (title.search(value) === -1) {
 				elem.classList.add('hide')
-				console.log(title)
+				// console.log(title)
 			} else {
 				elem.classList.remove('hide')
 			}
@@ -305,14 +315,14 @@ const sortIcon = document.getElementById('sort-icon')
 let sortIsClicked = false
 
 sortIcon.addEventListener('click', () => {
-	console.log('sorting is clicked')
+	// console.log('sorting is clicked')
 
 	if (!sortIsClicked) {
-		console.log('clicked')
+		// console.log('clicked')
 		getGamesData(urlSorted)
 		sortIsClicked = true
 	} else {
-		console.log('Button clicked again')
+		// console.log('Button clicked again')
 		getGamesData(urlAllGames)
 		sortIsClicked = false
 	}
@@ -324,13 +334,13 @@ const sortIconMob = document.getElementById('sortIconMob')
 let sortMobIsClicked = false
 
 sortIconMob.addEventListener('click', () => {
-	console.log('sorting is clicked')
+	// console.log('sorting is clicked')
 	if (!sortMobIsClicked) {
-		console.log('clicked')
+		// console.log('clicked')
 		getGamesData(urlSorted)
 		sortMobIsClicked = true
 	} else {
-		console.log('Button clicked again')
+		// console.log('Button clicked again')
 		getGamesData(urlAllGames)
 		sortMobIsClicked = false
 	}
