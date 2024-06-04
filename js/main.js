@@ -2,7 +2,7 @@ import { showGameDetails } from './details.js'
 import { createNode } from './utilities.js'
 
 export const urlApi = 'https://free-to-play-games-database.p.rapidapi.com/api'
-console.log(urlApi)
+// console.log(urlApi)
 
 const urlAllGames = urlApi.concat('/games')
 const urlWebGames = urlApi.concat('/games?platform=browser')
@@ -135,6 +135,7 @@ function showGames(array) {
 	}
 	let alt = ''
 	let iconPath = ''
+	let idClass = ''
 	array.forEach((element) => {
 		const card = createNode('div', {
 			class: 'flex column card'
@@ -164,7 +165,6 @@ function showGames(array) {
 		})
 		const readMore = createNode('a', {
 			href: `details.html?id=${element.id}`,
-			// target: "_blank",
 			role: 'button'
 		})
 		readMore.innerText = 'Read more'
@@ -175,11 +175,14 @@ function showGames(array) {
 			if (item === 'Web Browser') {
 				alt = 'Browser-based game'
 				iconPath = 'images/web.png'
+				idClass = 'web'
 			} else {
 				alt = 'Available on Windows'
 				iconPath = 'images/windows.png'
+				idClass = 'pc'
 			}
 			const platform = createNode('img', {
+				class: idClass,
 				src: iconPath,
 				alt: alt,
 				title: alt
@@ -187,12 +190,31 @@ function showGames(array) {
 			details.appendChild(platform)
 		})
 		const genre = createNode('p', {})
+		console.log(element.genre)
 		genre.innerText = element.genre
 
+		genre.addEventListener('click', () => {
+			getGamesData(urlAllGames + '?category=' + element.genre)
+		})
 		details.appendChild(genre)
 		bottomCardContainer.append(readMoreContainer, details)
 		card.append(thumb, title, shortDesc, bottomCardContainer)
 		output.appendChild(card)
+	})
+	/* ----------------------- Add Link To Platforms Icons ---------------------- */
+	//!FIX HOVER ICONS
+	const pcCards = document.querySelectorAll('.pc')
+	pcCards.forEach((element) => {
+		element.addEventListener('click', () => {
+			getGamesData(urlPcGames)
+		})
+	})
+
+	const webCards = document.querySelectorAll('.web')
+	webCards.forEach((element) => {
+		element.addEventListener('click', () => {
+			getGamesData(urlWebGames)
+		})
 	})
 }
 
