@@ -23,7 +23,7 @@ export function showGameDetails(array) {
 
 	/* ------------------------ Thumb+title+description ----------------------- */
 	const descWrapper = createNode('div', {
-		class: 'flex',
+		class: 'flex column',
 		id: 'descWrapper'
 	})
 	const thumb = createNode('img', {
@@ -111,7 +111,7 @@ export function showGameDetails(array) {
 
 	/* ------------------------ Additional Information ------------------------ */
 	const addInfoWrapper = createNode('div', {
-		class: 'flex, column additionalInfoContainer'
+		class: 'flex column additionalInfoContainer'
 	})
 
 	const addInfoTitle = createNode('h2', {

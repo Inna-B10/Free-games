@@ -60,7 +60,7 @@ header h1 {
 	font-size: 1.5rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	header {
 		background-image: url(../images/header-web.jpg);
 		background-repeat: no-repeat;
@@ -118,7 +118,7 @@ header h1 {
 	font-size: 1rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	#mobileNav {
 		position: relative;
 		display: none;
@@ -185,7 +185,7 @@ header h1 {
 
 /* Plathform buttons (web version) */
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	#platform-buttons {
 		width: 100%;
 		height: 4em;
@@ -235,7 +235,7 @@ header h1 {
 	display: none;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	#navButtonsWeb {
 		margin: 0 auto;
 		width: 95%;
@@ -370,7 +370,7 @@ header h1 {
 	cursor: pointer;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	.card {
 		width: 22%;
 		min-width: 200px;
@@ -418,7 +418,7 @@ header h1 {
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 640px) {
 	#cardDescription {
 		display: none;
 	}
@@ -431,7 +431,7 @@ header h1 {
 
 /* ----------- Show / Hide Platform Menu (Standart/mobile Version) ---------- */
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 640px) {
 	#platform-buttons {
 		flex-direction: column;
 	}
@@ -441,7 +441,7 @@ header h1 {
 	}
 }
 
-@media screen and (min-width: 439px) {
+@media screen and (min-width: 641px) {
 	#selectPlatform {
 		display: none;
 	}
@@ -480,7 +480,7 @@ header h1 {
 	font-family: 'Nunito', sans-serif;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	#info-section {
 		height: 75vh;
 	}
@@ -511,7 +511,7 @@ footer p {
 	font-family: 'Inter', sans-serif;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 641px) {
 	footer p {
 		width: 20%;
 	}
