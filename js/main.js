@@ -10,7 +10,7 @@ const urlSorted = urlApi.concat('/games?sort-by=alphabetical')
 export const output = document.getElementById('output')
 export const currentLocation = window.location.pathname
 
-console.log(currentLocation)
+//console.log(currentLocation)
 
 if (
 	currentLocation === '/' ||
@@ -98,7 +98,6 @@ export async function getGamesData(url) {
 		const response = await fetch(url, options)
 		if (response.ok) {
 			const result = await response.json()
-			console.log('result ', result)
 			updateDisplay(result)
 		} else {
 			console.log('Could not fetch data')
