@@ -98,7 +98,7 @@ export async function getGamesData(url) {
 		const response = await fetch(url, options)
 		if (response.ok) {
 			const result = await response.json()
-			console.log(result)
+			console.log('result ', result)
 			updateDisplay(result)
 		} else {
 			console.log('Could not fetch data')
