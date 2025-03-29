@@ -5,7 +5,7 @@ const detailsOutput = document.getElementById('detailsOutput')
 
 /* ----------------------- Get Details Of Current Game ---------------------- */
 if (
-	window.location.pathname === '/JS-API-PROJECT/details.html' ||
+	window.location.pathname === '/Free-games/details.html' ||
 	window.location.pathname === '/details.html'
 ) {
 	const gameId = window.location.href.split('=')[1]
@@ -24,17 +24,17 @@ export function showGameDetails(array) {
 	/* ------------------------ Thumb+title+description ----------------------- */
 	const descWrapper = createNode('div', {
 		class: 'flex',
-		id: 'descWrapper'
+		id: 'descWrapper',
 	})
 	const thumb = createNode('img', {
 		src: array.thumbnail,
 		alt: array.title,
-		title: array.title
+		title: array.title,
 	})
 	thumb.classList.add('mainGameImg')
 
 	const descDiv = createNode('div', {
-		class: 'flex column gameinfo'
+		class: 'flex column gameinfo',
 	})
 	const title = createNode('h1', {})
 	title.innerText = array.title
@@ -48,16 +48,16 @@ export function showGameDetails(array) {
 	/* ----------------------------- Screenshots; ----------------------------- */
 	const screenshots = createNode('div', {
 		id: 'screenshots',
-		class: 'screenshots'
+		class: 'screenshots',
 	})
 
-	array.screenshots.forEach((element) => {
+	array.screenshots.forEach(element => {
 		const screenDiv = createNode('div', {
-			id: 'screenDiv'
+			id: 'screenDiv',
 		})
 		const img = createNode('img', {
 			src: element.image,
-			class: 'sliderIMG'
+			class: 'sliderIMG',
 		})
 		screenDiv.append(img)
 		screenshots.append(screenDiv)
@@ -111,23 +111,23 @@ export function showGameDetails(array) {
 
 	/* ------------------------ Additional Information ------------------------ */
 	const addInfoWrapper = createNode('div', {
-		class: 'flex, column additionalInfoContainer'
+		class: 'flex, column additionalInfoContainer',
 	})
 
 	const addInfoTitle = createNode('h2', {
-		class: 'text-center'
+		class: 'text-center',
 	})
 	addInfoTitle.innerText = 'Additional Information'
 	const addInfoDiv = createNode('div', {
-		class: 'flex addInfoDiv'
+		class: 'flex addInfoDiv',
 	})
 
 	const addInfoCon = createNode('div', {
-		class: 'addInfo'
+		class: 'addInfo',
 	})
 
 	const divLeft = createNode('div', {
-		class: 'flex column'
+		class: 'flex column',
 	})
 
 	// -------------------------------- Platform
@@ -147,7 +147,7 @@ export function showGameDetails(array) {
 	divLeft.append(platformDiv, genreDiv)
 
 	const divRight = createNode('div', {
-		class: 'flex column'
+		class: 'flex column',
 	})
 
 	// -------------------------------- Publisher
@@ -173,19 +173,19 @@ export function showGameDetails(array) {
 
 	// -------------------------------- First warning
 	const warningInfoContainer = createNode('div', {
-		id: 'warningInfoContainer'
+		id: 'warningInfoContainer',
 	})
 	warningInfoContainer.classList.add('warningInfoContainer')
 
 	const warningIcon = createNode('img', {
 		src: './images/info-circle.png',
 		alt: 'warning info icon',
-		id: 'warningIcon'
+		id: 'warningIcon',
 	})
 	warningIcon.classList.add('warningIcon')
 
 	const warningFirst = createNode('p', {
-		class: 'warning'
+		class: 'warning',
 	})
 	warningFirst.innerText =
 		'Please note this free-to-play game may or may not offer optional in-game purchases.'
@@ -196,17 +196,17 @@ export function showGameDetails(array) {
 	const warningIconSecond = createNode('img', {
 		src: './images/info-circle.png',
 		alt: 'warning info icon',
-		id: 'warningIconSecond'
+		id: 'warningIconSecond',
 	})
 	warningIcon.classList.add('warningIcon')
 
 	const warningInfoContainerSecond = createNode('div', {
-		id: 'warningInfoContainerSecond'
+		id: 'warningInfoContainerSecond',
 	})
 	warningInfoContainer.classList.add('warningInfoContainer')
 
 	const warningSecond = createNode('p', {
-		class: 'warning'
+		class: 'warning',
 	})
 	warningSecond.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`
 
@@ -216,17 +216,17 @@ export function showGameDetails(array) {
 	const warningIconThird = createNode('img', {
 		src: './images/info-circle.png',
 		alt: 'warning info icon',
-		id: 'warningIconThird'
+		id: 'warningIconThird',
 	})
 	warningIcon.classList.add('warningIcon')
 
 	const warningInfoContainerThird = createNode('div', {
-		id: 'warningInfoContainerSecond'
+		id: 'warningInfoContainerSecond',
 	})
 	warningInfoContainer.classList.add('warningInfoContainer')
 
 	const warningThird = createNode('p', {
-		class: 'warning'
+		class: 'warning',
 	})
 	warningThird.innerText = `All material on this page is copyrighted by ${array.publisher} and their respective licensors. All other trademarks are the property of their respective owners.`
 
@@ -245,21 +245,21 @@ export function showGameDetails(array) {
 
 	/* -------------------------- Link To The Game ---------------------------- */
 	const linkContainer = createNode('div', {
-		class: 'linkContainer'
+		class: 'linkContainer',
 	})
 	const link = createNode('a', {
 		href: array.game_url,
 		target: '_blank',
 		role: 'button',
 		class: 'pushToGameBtn',
-		title: `Let\'s play ${array.title}`
+		title: `Let\'s play ${array.title}`,
 	})
 	link.innerText = `Play ${array.title}`
 	linkContainer.appendChild(link)
 
 	/* ------------------- Go back to all games list -------------------------- */
 	const backLinkContainer = createNode('div', {
-		class: 'linkBackContainer'
+		class: 'linkBackContainer',
 	})
 
 	const goBackText = createNode('p', {})
@@ -269,7 +269,7 @@ export function showGameDetails(array) {
 		href: './',
 		role: 'button',
 		class: 'pushBackBtn',
-		title: `Go back to the game list`
+		title: `Go back to the game list`,
 	})
 	backLink.innerText = `Go back to the game list`
 	backLinkContainer.append(goBackText, backLink)

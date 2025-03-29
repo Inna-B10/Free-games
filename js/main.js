@@ -16,8 +16,8 @@ export const currentLocation = window.location.pathname
 if (
 	currentLocation === '/' ||
 	currentLocation === '/index.html' ||
-	currentLocation === '/JS-API-PROJECT/' ||
-	currentLocation === '/JS-API-PROJECT/index.html'
+	currentLocation === '/Free-games/' ||
+	currentLocation === '/Free-games/index.html'
 ) {
 	const allGames = document.getElementById('all-games')
 	const webGames = document.getElementById('web-games')
@@ -87,13 +87,13 @@ export async function getGamesData(url) {
 	const options = {
 		method: 'GET',
 		params: {
-			'sort-by': 'alphabetical'
+			'sort-by': 'alphabetical',
 		},
 		headers: {
 			// 'X-RapidAPI-Key': 'bcfe5a59efmsh9f6626c627741d7p1468f3jsnf0bd5aa9c906',
 			'X-RapidAPI-Key': '33120feaa4msh71483202838c8c0p16d147jsn93fde0d94277',
-			'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-		}
+			'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
+		},
 	}
 
 	try {
@@ -116,13 +116,13 @@ function updateDisplay(array) {
 	/* Updated switch case */
 	switch (currentLocation) {
 		case '/':
-		case '/JS-API-PROJECT/':
+		case '/Free-games/':
 		case '/index.html':
-		case '/JS-API-PROJECT/index.html':
+		case '/Free-games/index.html':
 			showGames(array)
 			break
 		case '/details.html':
-		case '/JS-API-PROJECT/details.html':
+		case '/Free-games/details.html':
 			showGameDetails(array)
 			break
 	}
@@ -136,14 +136,14 @@ function showGames(array) {
 	let alt = ''
 	let iconPath = ''
 	let idClass = ''
-	array.forEach((element) => {
+	array.forEach(element => {
 		const card = createNode('div', {
-			class: 'flex column card'
+			class: 'flex column card',
 		})
 		const thumb = createNode('img', {
 			src: element.thumbnail,
 			alt: element.title,
-			title: element.title
+			title: element.title,
 		})
 		thumb.classList.add('thumbImg')
 
@@ -151,27 +151,27 @@ function showGames(array) {
 		title.innerText = element.title
 
 		const shortDesc = createNode('p', {
-			id: 'cardDescription'
+			id: 'cardDescription',
 		})
 		shortDesc.innerText = element.short_description
 
 		const bottomCardContainer = createNode('div', {})
 		const details = createNode('div', {
-			class: 'flex card-details'
+			class: 'flex card-details',
 		})
 
 		const readMoreContainer = createNode('div', {
-			class: 'readMoreContainer'
+			class: 'readMoreContainer',
 		})
 		const readMore = createNode('a', {
 			href: `details.html?id=${element.id}`,
-			role: 'button'
+			role: 'button',
 		})
 		readMore.innerText = 'Read more'
 		readMoreContainer.appendChild(readMore)
 
 		const platformArray = element.platform.split(', ')
-		platformArray.map((item) => {
+		platformArray.map(item => {
 			if (item === 'Web Browser') {
 				alt = 'Browser-based game'
 				iconPath = 'images/web.png'
@@ -185,7 +185,7 @@ function showGames(array) {
 				class: idClass,
 				src: iconPath,
 				alt: alt,
-				title: alt
+				title: alt,
 			})
 			details.appendChild(platform)
 		})
@@ -214,14 +214,14 @@ function showGames(array) {
 	/* ----------------------- Add Link To Platforms Icons ---------------------- */
 	//!FIX HOVER ICONS
 	const pcCards = document.querySelectorAll('.pc')
-	pcCards.forEach((element) => {
+	pcCards.forEach(element => {
 		element.addEventListener('click', () => {
 			getGamesData(urlPcGames)
 		})
 	})
 
 	const webCards = document.querySelectorAll('.web')
-	webCards.forEach((element) => {
+	webCards.forEach(element => {
 		element.addEventListener('click', () => {
 			getGamesData(urlWebGames)
 		})
@@ -262,7 +262,7 @@ const mobileNav = document.getElementById('mobileNav')
 const searchFieldDiv = createNode('div', {})
 const searchField = createNode('input', {
 	type: 'search',
-	id: 'searchMobile'
+	id: 'searchMobile',
 })
 searchFieldDiv.append(searchField)
 mobileNav.append(searchFieldDiv)
