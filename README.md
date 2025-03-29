@@ -11,5 +11,5 @@ The page can have functionalities like searching for spesific information, rando
 
 ### Contributors:
 
-<a href="https://github.com/katerinabredihina" target="_blank" rel="noopener noreferrer">Kateryna</a>
+<a href="https://github.com/katerinabredihina" target="_blank" rel="noopener noreferrer">Kateryna</a>  
 <a href="https://github.com/Inna-B10" target="_blank" rel="noopener noreferrer">Inna</a>
