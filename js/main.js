@@ -2,7 +2,6 @@ import { showGameDetails } from './details.js'
 import { createNode } from './utilities.js'
 
 export const urlApi = 'https://free-to-play-games-database.p.rapidapi.com/api'
-// console.log(urlApi)
 
 const urlAllGames = urlApi.concat('/games')
 const urlWebGames = urlApi.concat('/games?platform=browser')
@@ -11,7 +10,7 @@ const urlSorted = urlApi.concat('/games?sort-by=alphabetical')
 export const output = document.getElementById('output')
 export const currentLocation = window.location.pathname
 
-//console.log(currentLocation)
+console.log(currentLocation)
 
 if (
 	currentLocation === '/' ||
@@ -90,7 +89,6 @@ export async function getGamesData(url) {
 			'sort-by': 'alphabetical',
 		},
 		headers: {
-			// 'X-RapidAPI-Key': 'bcfe5a59efmsh9f6626c627741d7p1468f3jsnf0bd5aa9c906',
 			'X-RapidAPI-Key': '33120feaa4msh71483202838c8c0p16d147jsn93fde0d94277',
 			'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
 		},
@@ -100,6 +98,7 @@ export async function getGamesData(url) {
 		const response = await fetch(url, options)
 		if (response.ok) {
 			const result = await response.json()
+			console.log(result)
 			updateDisplay(result)
 		} else {
 			console.log('Could not fetch data')
