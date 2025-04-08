@@ -30,7 +30,7 @@ h1,
 h2,
 a {
 	font-family: 'Inter', sans-serif;
-	text-wrap: nowrap;
+	/* text-wrap: nowrap; */
 }
 
 .hide {
